@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>pdf merge</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-primary ">
+        <div class="container-fluid d-flex justify-content-evenly">
+          <a class="navbar-brand" href="#">PDF-Merger</a>
+              <a class="nav-link active" aria-current="page" href="#" style="font-size: 20px;">Home</a>
+              <a class="nav-link" href="#" style="font-size: 20px;">About</a>
+
+            </div>
+      </nav>
+      <section style="position: absolute;left:30%;top: 10%;">
+        <h1>Pdf Merger app</h1><p> allows to merge the two pdf which the user gives as input</p>
+      <h1>Choose 2 files to merge</h1>
+      <p><b>note:</b> you can add the 2 files in the same file upload field by selecting those 2 at the same time</p>
+    </section>
+    <form action="/" method="post" enctype="multipart/form-data" style="position: absolute;top: 40%; left:30%">
+    <div class="input-group">
+<input type="file" name="pdfs" accept=".pdf" multiple required>
+       <input type="submit" value="submit">
+      </div>
+    </form>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</html>
