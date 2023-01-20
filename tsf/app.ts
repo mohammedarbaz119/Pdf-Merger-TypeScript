@@ -16,13 +16,15 @@ app.use('/merger',express.static('merger'))
 app.get('/',(req:Request,res:Response)=>{
     res.sendFile(path.join(__dirname,'../templates/index.html'))
 })
-app.post('/',mult.array('pdfs',2),async(req:Request,res:Response)=>{
+app.post('/',mult.array('pdfs',12),async(req:Request,res:Response)=>{
    
  if(req.files && Array.isArray(req.files)){
-    console.log(req.files[0].path)
    
-   await pdfmerger.add('uploads/'+req.files[0].filename)
-    await pdfmerger.add('uploads/'+req.files[1].filename)
+   for(let i of req.files){
+    await pdfmerger.add('uploads/'+i.filename)
+   }
+  
+    
     await pdfmerger.save('merger/merged.pdf')
     return res.redirect('/merger/merged.pdf')
  }
